@@ -1,0 +1,33 @@
+uuid: 1734f8d7-3db1-484c-992d-dab0b9bc52fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.group_seminars
+  module:
+    - ctools
+    - views
+  theme:
+    - bntst
+id: views_block__group_seminars_block_1
+theme: bntst
+region: content
+weight: 1
+provider: null
+plugin: 'views_block:group_seminars-block_1'
+settings:
+  id: 'views_block:group_seminars-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      seminar_group: seminar_group
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
