@@ -31,6 +31,9 @@ module:
   node: 0
   options: 0
   page_cache: 0
+  page_manager: 0
+  page_manager_ui: 0
+  panels: 0
   path: 0
   quickedit: 0
   rdf: 0
@@ -47,8 +50,10 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  ds: 1
   menu_link_content: 1
   pathauto: 1
+  ds_extras: 2
   views: 10
   paragraphs: 11
   standard: 1000

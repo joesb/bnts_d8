@@ -637,10 +637,10 @@ display:
         - 'config:field.storage.node.field_conference_dates'
         - 'config:field.storage.taxonomy_term.field_logo'
         - 'config:field.storage.taxonomy_term.field_website'
-  embed_1:
-    display_plugin: embed
-    id: embed_1
-    display_title: 'Homepage Embed'
+  block_2:
+    display_plugin: block
+    id: block_2
+    display_title: 'Homepage Block'
     position: 3
     display_options:
       display_extenders: {  }
@@ -649,11 +649,26 @@ display:
       defaults:
         title: false
         pager: false
+        empty: false
       pager:
         type: some
         options:
           items_per_page: 1
           offset: 0
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: '<p>Sorry, there''s no upcoming conferences at the moment.</p>'
+            format: basic_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:

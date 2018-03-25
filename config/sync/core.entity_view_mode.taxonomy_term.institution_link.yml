@@ -1,0 +1,10 @@
+uuid: 2ac75d4d-10c8-470d-a247-a8611fdd5f1e
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.institution_link
+label: 'Institution Link'
+targetEntityType: taxonomy_term
+cache: true

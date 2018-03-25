@@ -1,0 +1,41 @@
+uuid: 567522fd-ec5e-4cec-bf4c-e47009da3ddc
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.homepage
+    - views.view.conferences
+  module:
+    - panels
+    - views
+id: homepage-panels_variant-0
+label: General
+variant: panels_variant
+variant_settings:
+  blocks:
+    57f9e5ae-407c-4ded-9f28-ebde7b46110b:
+      id: 'views_block:conferences-block_2'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: 0
+      uuid: 57f9e5ae-407c-4ded-9f28-ebde7b46110b
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 32120634-2e77-4cf4-93c0-83254814a55c
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: homepage-panels_variant-0
+  builder: standard
+page: homepage
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }
