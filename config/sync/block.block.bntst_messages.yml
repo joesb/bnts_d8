@@ -1,0 +1,22 @@
+uuid: e8527132-2d6f-4cd2-bbe4-4112d87b143d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bntst
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: bntst_messages
+theme: bntst
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

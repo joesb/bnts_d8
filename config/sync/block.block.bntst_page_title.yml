@@ -1,0 +1,20 @@
+uuid: fa4d69f6-7def-4f0d-872e-077d767bfe52
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bntst
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: bntst_page_title
+theme: bntst
+region: content
+weight: -3
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

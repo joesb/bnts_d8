@@ -1,0 +1,30 @@
+uuid: 02be20b5-d91b-4fa5-ac8e-c7a506565ba0
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.groups
+  module:
+    - system
+    - views
+  theme:
+    - bntst
+id: views_block__groups_block_1
+theme: bntst
+region: content
+weight: 1
+provider: null
+plugin: 'views_block:groups-block_1'
+settings:
+  id: 'views_block:groups-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /groups
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,18 @@
+uuid: ea93937e-13e6-448c-bb29-cae2ef015606
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.seminar_group
+  module:
+    - user
+id: node.seminar_group.teaser
+targetEntityType: node
+bundle: seminar_group
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }

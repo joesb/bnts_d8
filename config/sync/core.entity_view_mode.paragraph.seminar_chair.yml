@@ -1,0 +1,10 @@
+uuid: 899960cd-6a2d-4391-918b-bf79c08d1318
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.seminar_chair
+label: 'Seminar Chair'
+targetEntityType: paragraph
+cache: true

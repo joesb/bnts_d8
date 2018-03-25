@@ -1,0 +1,9 @@
+uuid: c7351e52-d862-4a49-8134-c16e226b9c2e
+langcode: en
+status: true
+dependencies: {  }
+id: seminar_session
+label: 'Seminar Session'
+icon_uuid: null
+description: 'A session in an seminar group''s annual seminar.'
+behavior_plugins: {  }

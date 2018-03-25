@@ -1,0 +1,8 @@
+uuid: 633108c5-5e50-499e-ae4d-5d5d1ee8eef1
+langcode: en
+status: true
+dependencies: {  }
+id: conference_date
+label: 'Conference date'
+locked: false
+pattern: 'j F, Y'

@@ -1,0 +1,25 @@
+uuid: 2f2878d5-76a0-474d-81c0-4358398b5c07
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a2e5b3db-af48-47f1-8c91-ea0a0731ec3c'
+  module:
+    - block_content
+  theme:
+    - bntst
+id: bntsmission
+theme: bntst
+region: navigation
+weight: -3
+provider: null
+plugin: 'block_content:a2e5b3db-af48-47f1-8c91-ea0a0731ec3c'
+settings:
+  id: 'block_content:a2e5b3db-af48-47f1-8c91-ea0a0731ec3c'
+  label: 'BNTS Mission'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

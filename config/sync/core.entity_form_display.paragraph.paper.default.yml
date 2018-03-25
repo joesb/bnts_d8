@@ -1,0 +1,49 @@
+uuid: ef4d6dcf-b6ea-4f0e-889c-e0531c1e4912
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paper.field_abstract
+    - field.field.paragraph.paper.field_paper_title
+    - field.field.paragraph.paper.field_presenter
+    - paragraphs.paragraphs_type.paper
+  module:
+    - paragraphs
+    - text
+id: paragraph.paper.default
+targetEntityType: paragraph
+bundle: paper
+mode: default
+content:
+  field_abstract:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_paper_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_presenter:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

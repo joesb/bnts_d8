@@ -1,0 +1,37 @@
+uuid: 6f61b3d2-4fda-403e-8658-ab2615a8e138
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seminar_sessions
+    - node.type.seminar
+    - paragraphs.paragraphs_type.seminar_session
+  module:
+    - entity_reference_revisions
+id: node.seminar.field_seminar_sessions
+field_name: field_seminar_sessions
+entity_type: node
+bundle: seminar
+label: Sessions
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      seminar_session: seminar_session
+    target_bundles_drag_drop:
+      paper:
+        weight: 4
+        enabled: false
+      person:
+        weight: 5
+        enabled: false
+      seminar_session:
+        enabled: true
+        weight: 6
+field_type: entity_reference_revisions

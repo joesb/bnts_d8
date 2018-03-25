@@ -1,0 +1,42 @@
+uuid: 1ac7808f-9357-4688-a1cd-5eaa7aab1a71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paper.field_abstract
+    - field.field.paragraph.paper.field_paper_title
+    - field.field.paragraph.paper.field_presenter
+    - paragraphs.paragraphs_type.paper
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.paper.default
+targetEntityType: paragraph
+bundle: paper
+mode: default
+content:
+  field_abstract:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_paper_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_presenter:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

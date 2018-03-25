@@ -1,0 +1,14 @@
+uuid: 0f8d989a-39e3-4228-9c10-ced4b4149d17
+name: 'British New Testament Society'
+mail: info@bnts.org.uk
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

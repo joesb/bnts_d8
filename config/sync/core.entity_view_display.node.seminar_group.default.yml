@@ -1,0 +1,41 @@
+uuid: ae23bcfe-cc39-4d34-867c-13e10c491633
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.seminar_group.field_description
+    - field.field.node.seminar_group.field_seminar_active
+    - field.field.node.seminar_group.field_seminar_chairs
+    - node.type.seminar_group
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.seminar_group.default
+targetEntityType: node
+bundle: seminar_group
+mode: default
+content:
+  field_description:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_seminar_chairs:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: seminar_chair
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_seminar_active: true

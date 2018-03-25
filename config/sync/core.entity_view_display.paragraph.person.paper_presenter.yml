@@ -1,0 +1,33 @@
+uuid: 04713926-16a5-4d39-949b-9ca999fba66e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.paper_presenter
+    - field.field.paragraph.person.field_email
+    - field.field.paragraph.person.field_institution
+    - field.field.paragraph.person.field_name
+    - paragraphs.paragraphs_type.person
+id: paragraph.person.paper_presenter
+targetEntityType: paragraph
+bundle: person
+mode: paper_presenter
+content:
+  field_institution:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_name:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_email: true

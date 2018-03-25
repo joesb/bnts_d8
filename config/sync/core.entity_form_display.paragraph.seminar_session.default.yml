@@ -1,0 +1,37 @@
+uuid: 8b4120bc-edf5-4166-87e5-d168d4bfdcc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.seminar_session.field_paper
+    - field.field.paragraph.seminar_session.field_paper_session
+    - paragraphs.paragraphs_type.seminar_session
+  module:
+    - paragraphs
+id: paragraph.seminar_session.default
+targetEntityType: paragraph
+bundle: seminar_session
+mode: default
+content:
+  field_paper:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_paper_session:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

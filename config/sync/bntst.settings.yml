@@ -1,0 +1,21 @@
+favicon:
+  mimetype: image/png
+  path: themes/custom/bntst/favicon.png
+  url: 'http://d8.bnts.develop/themes/custom/bntst/favicon.png'
+  use_default: 0
+schemas:
+  bootstrap: 8000
+  bntst: 8000
+features:
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+  node_user_picture: 1
+logo:
+  path: themes/custom/bntst/logo.png
+  url: ''
+  use_default: 1
+cdn_jsdelivr_theme: yeti
+table_responsive: '-1'
+table: ''
+navbar_position: ''

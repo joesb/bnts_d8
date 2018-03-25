@@ -1,0 +1,43 @@
+uuid: 7370cb78-7d6d-4472-b417-d8ed05ed25db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.person.field_email
+    - field.field.paragraph.person.field_institution
+    - field.field.paragraph.person.field_name
+    - paragraphs.paragraphs_type.person
+id: paragraph.person.default
+targetEntityType: paragraph
+bundle: person
+mode: default
+content:
+  field_email:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_institution:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

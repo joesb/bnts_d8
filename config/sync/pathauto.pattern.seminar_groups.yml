@@ -1,0 +1,22 @@
+uuid: 2e2c6fc5-eff0-419f-9222-99474fb05d87
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: seminar_groups
+label: 'Seminar groups'
+type: 'canonical_entities:node'
+pattern: 'groups/[node:title]'
+selection_criteria:
+  391c78ab-07b4-437d-9777-5ed4cdf762c8:
+    id: node_type
+    bundles:
+      seminar_group: seminar_group
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 391c78ab-07b4-437d-9777-5ed4cdf762c8
+selection_logic: and
+weight: -5
+relationships: {  }

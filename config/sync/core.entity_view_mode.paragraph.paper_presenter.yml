@@ -1,0 +1,10 @@
+uuid: 275b1d87-3c02-47cd-91bf-c226585ebbe1
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.paper_presenter
+label: 'Paper presenter'
+targetEntityType: paragraph
+cache: true

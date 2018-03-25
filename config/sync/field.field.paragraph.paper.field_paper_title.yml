@@ -1,0 +1,19 @@
+uuid: c527dbed-f77e-407a-bddf-1471b7587b3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paper_title
+    - paragraphs.paragraphs_type.paper
+id: paragraph.paper.field_paper_title
+field_name: field_paper_title
+entity_type: paragraph
+bundle: paper
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

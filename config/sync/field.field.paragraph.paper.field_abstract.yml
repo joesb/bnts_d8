@@ -1,0 +1,21 @@
+uuid: 9ee74c23-df57-4a60-bb4e-2567e8fe201a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_abstract
+    - paragraphs.paragraphs_type.paper
+  module:
+    - text
+id: paragraph.paper.field_abstract
+field_name: field_abstract
+entity_type: paragraph
+bundle: paper
+label: 'Abstract or synopsis'
+description: 'The paper abstract, or a synopsis of the session if, for example, the item is a panel discussion or book review.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

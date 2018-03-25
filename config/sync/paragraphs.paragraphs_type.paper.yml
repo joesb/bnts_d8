@@ -1,0 +1,9 @@
+uuid: b423f31b-4a51-4acf-b8e5-099163ef7bda
+langcode: en
+status: true
+dependencies: {  }
+id: paper
+label: Paper
+icon_uuid: null
+description: 'A paper or other item delivered to a seminar group.'
+behavior_plugins: {  }

@@ -1,0 +1,37 @@
+uuid: 3ccac05d-abbb-4d2e-9650-696a7ae10d75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paper
+    - paragraphs.paragraphs_type.paper
+    - paragraphs.paragraphs_type.seminar_session
+  module:
+    - entity_reference_revisions
+id: paragraph.seminar_session.field_paper
+field_name: field_paper
+entity_type: paragraph
+bundle: seminar_session
+label: Paper
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      paper: paper
+    target_bundles_drag_drop:
+      paper:
+        enabled: true
+        weight: 4
+      person:
+        weight: 5
+        enabled: false
+      seminar_session:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

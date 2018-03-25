@@ -1,0 +1,23 @@
+uuid: 021cdcd2-a0c4-4e81-b9f2-c1fe7886da1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seminar_active
+    - node.type.seminar_group
+id: node.seminar_group.field_seminar_active
+field_name: field_seminar_active
+entity_type: node
+bundle: seminar_group
+label: Active
+description: 'Is this seminar group currently active?'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

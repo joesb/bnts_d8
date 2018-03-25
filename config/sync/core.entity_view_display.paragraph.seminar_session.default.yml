@@ -1,0 +1,33 @@
+uuid: ec6552ad-f47e-4f06-a82a-d2583908e99b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.seminar_session.field_paper
+    - field.field.paragraph.seminar_session.field_paper_session
+    - paragraphs.paragraphs_type.seminar_session
+  module:
+    - entity_reference_revisions
+id: paragraph.seminar_session.default
+targetEntityType: paragraph
+bundle: seminar_session
+mode: default
+content:
+  field_paper:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_paper_session:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

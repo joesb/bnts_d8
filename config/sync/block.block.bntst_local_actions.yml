@@ -1,0 +1,20 @@
+uuid: 4679678c-5cbf-40c1-99d8-6c4645647a40
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bntst
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: bntst_local_actions
+theme: bntst
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

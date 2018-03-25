@@ -1,0 +1,9 @@
+uuid: f50b4051-5568-441f-ab5d-f96b9dc28a0b
+langcode: en
+status: true
+dependencies: {  }
+name: Session
+vid: session
+description: ''
+hierarchy: 0
+weight: 0

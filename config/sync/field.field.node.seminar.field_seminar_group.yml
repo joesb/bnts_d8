@@ -1,0 +1,29 @@
+uuid: 20ae9eb9-0080-4dd0-8ea9-82edc3ced6da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seminar_group
+    - node.type.seminar
+    - node.type.seminar_group
+id: node.seminar.field_seminar_group
+field_name: field_seminar_group
+entity_type: node
+bundle: seminar
+label: 'Seminar group'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      seminar_group: seminar_group
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

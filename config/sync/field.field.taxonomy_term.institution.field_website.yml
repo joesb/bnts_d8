@@ -1,0 +1,23 @@
+uuid: 4a29471d-b1de-48e8-b197-66a10197e01a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_website
+    - taxonomy.vocabulary.institution
+  module:
+    - link
+id: taxonomy_term.institution.field_website
+field_name: field_website
+entity_type: taxonomy_term
+bundle: institution
+label: Website
+description: 'A link to the institution website.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+field_type: link

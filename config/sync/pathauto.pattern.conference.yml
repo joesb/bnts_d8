@@ -1,0 +1,22 @@
+uuid: 7b6616d0-4612-4db4-bcc1-c893037d0f58
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: conference
+label: Conference
+type: 'canonical_entities:node'
+pattern: 'conference/[node:title]'
+selection_criteria:
+  2705f5a0-7829-4027-ae8c-88d80a797c01:
+    id: node_type
+    bundles:
+      conference: conference
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 2705f5a0-7829-4027-ae8c-88d80a797c01
+selection_logic: and
+weight: -5
+relationships: {  }

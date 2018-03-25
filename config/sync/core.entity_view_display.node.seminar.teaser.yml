@@ -1,0 +1,28 @@
+uuid: c19442b0-d5e6-423c-b5ec-fd91c4b2021e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.seminar.body
+    - node.type.seminar
+  module:
+    - text
+    - user
+id: node.seminar.teaser
+targetEntityType: node
+bundle: seminar
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

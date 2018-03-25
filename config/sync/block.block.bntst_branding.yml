@@ -1,0 +1,25 @@
+uuid: 6e5ad680-83ab-40db-8408-9ee4d0af435b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bntst
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: bntst_branding
+theme: bntst
+region: navigation
+weight: -4
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

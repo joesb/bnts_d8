@@ -1,0 +1,22 @@
+uuid: 3edbfa82-606f-46c6-9b6a-7da33fca2e6a
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - bntst
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: bntst_help
+theme: bntst
+region: content
+weight: -5
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

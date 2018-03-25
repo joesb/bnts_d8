@@ -1,0 +1,52 @@
+uuid: 96f02cd0-1d1b-4aef-824f-85854ca39d89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.conference.body
+    - field.field.node.conference.field_call_for_papers
+    - field.field.node.conference.field_call_for_papers_file
+    - field.field.node.conference.field_conference_dates
+    - field.field.node.conference.field_institution
+    - node.type.conference
+  module:
+    - datetime_range
+    - text
+    - user
+id: node.conference.default
+targetEntityType: node
+bundle: conference
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_call_for_papers:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_conference_dates:
+    weight: 0
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: conference_date
+      separator: '-'
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  links:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_call_for_papers_file: true
+  field_institution: true

@@ -1,0 +1,18 @@
+uuid: 407e6d4b-0b07-45ff-9a7f-803f60342e62
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Conference
+type: conference
+description: 'A BNTS annual conference page. This is used to form the linking factor for other content types to bind to - programmes, seminars, plenary speakers and so on.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

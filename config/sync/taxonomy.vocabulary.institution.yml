@@ -1,0 +1,9 @@
+uuid: 51d36506-5b8f-459a-9b21-9ab4617d960e
+langcode: en
+status: true
+dependencies: {  }
+name: Institution
+vid: institution
+description: 'An academic institution that may host a conference or where someone works'
+hierarchy: 0
+weight: 0

@@ -1,0 +1,34 @@
+uuid: 999c002c-4afb-4ed5-9862-cdf1aaf1469b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_presenter
+    - paragraphs.paragraphs_type.paper
+    - paragraphs.paragraphs_type.person
+  module:
+    - entity_reference_revisions
+id: paragraph.paper.field_presenter
+field_name: field_presenter
+entity_type: paragraph
+bundle: paper
+label: Presenter(s)
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      person: person
+    target_bundles_drag_drop:
+      paper:
+        weight: 3
+        enabled: false
+      person:
+        enabled: true
+        weight: 4
+field_type: entity_reference_revisions

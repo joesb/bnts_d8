@@ -1,0 +1,17 @@
+uuid: 845a7659-95b0-441d-bd48-b7b7cb51d4bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Seminar
+type: seminar
+description: 'An annual seminar, listing the papers to be presented for this seminar.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
