@@ -6,3 +6,12 @@
  *
  * Place your custom PHP code in this file.
  */
+
+function bntst_preprocess_field(&$variables, $hook) {
+    $element = $variables['element'];
+    if ($element['#field_name'] == 'field_abstract') {
+        /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+        $paragraph = $element['#object'];
+        $variables['field_id'] = $paragraph->id();
+    }
+}

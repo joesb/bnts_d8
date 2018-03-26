@@ -3,15 +3,15 @@ global-styling:
     theme:
       css/style.css: {}
   js:
-      bootstrap/js/affix.js: {}
-      bootstrap/js/alert.js: {}
-      bootstrap/js/button.js: {}
-      bootstrap/js/carousel.js: {}
-      bntst/js/collapse.js: {}
-      bootstrap/js/dropdown.js: {}
-      bootstrap/js/modal.js: {}
-      bootstrap/js/tooltip.js: {}
-      bootstrap/js/popover.js: {}
-      bootstrap/js/scrollspy.js: {}
-      bootstrap/js/tab.js: {}
-      bntst/js/transition.js: {}
+#      ../../contrib/bootstrap/js/affix.js: {}
+#      ../../contrib/bootstrap/js/alert.js: {}
+#      ../../contrib/bootstrap/js/button.js: {}
+#      ../../bootstrap/js/carousel.js: {}
+      js/collapse.js: {}
+      ../../contrib/bootstrap/js/dropdown.js: {}
+      ../../contrib/bootstrap/js/modal.js: {}
+      ../../contrib/bootstrap/js/tooltip.js: {}
+      ../../contrib/bootstrap/js/popover.js: {}
+#      ../../contrib/bootstrap/js/scrollspy.js: {}
+#      ../../contrib/bootstrap/js/tab.js: {}
+      js/transition.js: {}
