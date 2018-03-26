@@ -8,6 +8,20 @@ dependencies:
     - field.field.paragraph.person.field_institution
     - field.field.paragraph.person.field_name
     - paragraphs.paragraphs_type.person
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_name
+        - field_institution
 id: paragraph.person.paper_presenter
 targetEntityType: paragraph
 bundle: person

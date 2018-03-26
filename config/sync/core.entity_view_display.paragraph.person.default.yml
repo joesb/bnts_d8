@@ -7,6 +7,28 @@ dependencies:
     - field.field.paragraph.person.field_institution
     - field.field.paragraph.person.field_name
     - paragraphs.paragraphs_type.person
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes: {  }
+        wrappers:
+          content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      content:
+        - field_name
+        - field_email
+        - field_institution
 id: paragraph.person.default
 targetEntityType: paragraph
 bundle: person
