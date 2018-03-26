@@ -52,11 +52,6 @@
     label_display == 'visually_hidden' ? 'sr-only',
   ]
 %}
-{% if label_display == 'above' %}
-{% set label_tag = 'h3' %}
-{% else %}
-{% set label_tag = 'div' %}
-{% endif %}
 
 {% if label_hidden %}
   {% if multiple %}
@@ -67,17 +62,17 @@
     </div>
   {% else %}
     {% for item in items %}
-      <div{{ attributes.addClass(classes, 'field--item') }}>{{ item.content }}</div>
+      <h2{{ attributes.addClass(classes, 'field--item') }}>{{ item.content }}</h2>
     {% endfor %}
   {% endif %}
 {% else %}
   <div{{ attributes.addClass(classes) }}>
-    <{{ label_tag }}{{ title_attributes.addClass(title_classes) }}>{{ label }}</{{ label_tag }}>
+    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
     {% if multiple %}
       <div class="field--items">
     {% endif %}
     {% for item in items %}
-      <div{{ item.attributes.addClass('field--item') }}>{{ item.content }}</div>
+      <h2{{ item.attributes.addClass('field--item') }}>{{ item.content }}</h2>
     {% endfor %}
     {% if multiple %}
       </div>

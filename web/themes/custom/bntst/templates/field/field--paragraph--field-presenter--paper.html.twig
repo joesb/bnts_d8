@@ -62,7 +62,7 @@
   {% if multiple %}
     <div{{ attributes.addClass(classes, 'field--items') }}>
       {% for item in items %}
-        <div{{ item.attributes.addClass('field--item') }}>{{ item.content }}</div>
+        <div{{ item.attributes.addClass('field--item clearfix') }}>{{ item.content }}</div>
       {% endfor %}
     </div>
   {% else %}

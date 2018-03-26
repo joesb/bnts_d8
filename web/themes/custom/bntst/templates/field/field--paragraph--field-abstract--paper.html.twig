@@ -44,6 +44,7 @@
     'field--name-' ~ field_name|clean_class,
     'field--type-' ~ field_type|clean_class,
     'field--label-' ~ label_display,
+    'field--id-' ~ field_id,
   ]
 %}
 {%
@@ -67,7 +68,12 @@
     </div>
   {% else %}
     {% for item in items %}
-      <div{{ attributes.addClass(classes, 'field--item') }}>{{ item.content }}</div>
+    <p><a class="btn btn-default btn-xs" role="button" data-toggle="collapse" href="#collapse{{ field_id }}" aria-expanded="false" aria-controls="collapse{{ field_id }}">
+      View abstract <span class="caret"></span>
+    </a></p>
+      <div{{ attributes.addClass(classes, 'field--item collapse') }} id="collapse{{ field_id }}">
+          {{ item.content }}
+      </div>
     {% endfor %}
   {% endif %}
 {% else %}
