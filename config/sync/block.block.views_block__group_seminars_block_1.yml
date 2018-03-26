@@ -1,11 +1,11 @@
-uuid: 1734f8d7-3db1-484c-992d-dab0b9bc52fd
+uuid: 6a73014a-a4c1-44e5-aa32-fdd47aa4b3cb
 langcode: en
 status: true
 dependencies:
   config:
     - views.view.group_seminars
   module:
-    - ctools
+    - node
     - views
   theme:
     - bntst
@@ -19,13 +19,13 @@ settings:
   id: 'views_block:group_seminars-block_1'
   label: ''
   provider: views
-  label_display: '0'
+  label_display: visible
   views_label: ''
   items_per_page: none
   context_mapping: {  }
 visibility:
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
+  node_type:
+    id: node_type
     bundles:
       seminar_group: seminar_group
     negate: false
