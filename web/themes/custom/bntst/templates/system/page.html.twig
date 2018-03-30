@@ -120,9 +120,9 @@
       {# Content #}
       {%
         set content_classes = [
-          page.sidebar_first and page.sidebar_second ? 'col-sm-6',
+          page.sidebar_first and page.sidebar_second ? 'col-sm-5',
           page.sidebar_first and page.sidebar_second is empty ? 'col-sm-9',
-          page.sidebar_second and page.sidebar_first is empty ? 'col-sm-9',
+          page.sidebar_second and page.sidebar_first is empty ? 'col-sm-8',
           page.sidebar_first is empty and page.sidebar_second is empty ? 'col-sm-12'
         ]
       %}
@@ -152,7 +152,7 @@
       {# Sidebar Second #}
       {% if page.sidebar_second %}
         {% block sidebar_second %}
-          <aside class="col-sm-3" role="complementary">
+          <aside class="col-sm-4" role="complementary">
             {{ page.sidebar_second }}
           </aside>
         {% endblock %}

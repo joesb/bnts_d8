@@ -1,0 +1,28 @@
+uuid: 4c687ac2-d35c-4ab7-a6f3-c44fbdbfc608
+langcode: en
+status: true
+dependencies:
+  module:
+    - bnts_custom
+    - node
+  theme:
+    - bntst
+id: customseminarsthisyearblock
+theme: bntst
+region: sidebar_second
+weight: 0
+provider: null
+plugin: seminars_this_year_block
+settings:
+  id: seminars_this_year_block
+  label: 'Seminars this year'
+  provider: bnts_custom
+  label_display: visible
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      seminar: seminar
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

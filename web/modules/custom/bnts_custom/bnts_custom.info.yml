@@ -1,0 +1,4 @@
+name: 'BNTS Site Customisations'
+type: module
+description: 'Customisations for the BNTS site.'
+core: 8.x

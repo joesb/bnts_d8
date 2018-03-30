@@ -7,6 +7,9 @@ dependencies:
     - field.field.node.conference.field_call_for_papers
     - field.field.node.conference.field_call_for_papers_file
     - field.field.node.conference.field_conference_dates
+    - field.field.node.conference.field_conference_information
+    - field.field.node.conference.field_conference_programme
+    - field.field.node.conference.field_downloads
     - field.field.node.conference.field_institution
     - node.type.conference
   module:
@@ -57,6 +60,27 @@ content:
       increment: 15
     third_party_settings: {  }
     type: daterange_datelist
+    region: content
+  field_conference_information:
+    weight: 27
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_conference_programme:
+    weight: 26
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_downloads:
+    weight: 28
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
     region: content
   field_institution:
     weight: 8

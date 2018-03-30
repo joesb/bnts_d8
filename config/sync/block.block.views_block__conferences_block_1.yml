@@ -1,0 +1,30 @@
+uuid: 3000d07b-3f4c-4505-9c1a-f250fab0789d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.conferences
+  module:
+    - system
+    - views
+  theme:
+    - bntst
+id: views_block__conferences_block_1
+theme: bntst
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:conferences-block_1'
+settings:
+  id: 'views_block:conferences-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /conferences
+    negate: false
+    context_mapping: {  }

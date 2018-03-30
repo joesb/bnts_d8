@@ -13,6 +13,7 @@ dependencies:
   module:
     - datetime_range
     - ds
+    - file
     - text
     - user
 third_party_settings:
@@ -25,10 +26,22 @@ third_party_settings:
       settings: {  }
     regions:
       content:
+        - node_title
         - field_conference_dates
         - field_institution
         - body
         - field_call_for_papers
+        - field_call_for_papers_file
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h1
+          class: ''
 id: node.conference.teaser
 targetEntityType: node
 bundle: conference
@@ -37,21 +50,29 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 2
+    weight: 3
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
   field_call_for_papers:
     type: text_default
-    weight: 3
+    weight: 4
     region: content
     label: above
     settings: {  }
     third_party_settings: {  }
+  field_call_for_papers_file:
+    type: file_default
+    weight: 5
+    region: content
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
   field_conference_dates:
     type: daterange_default
-    weight: 0
+    weight: 1
     region: content
     label: hidden
     settings:
@@ -61,7 +82,7 @@ content:
     third_party_settings: {  }
   field_institution:
     type: entity_reference_entity_view
-    weight: 1
+    weight: 2
     region: content
     label: hidden
     settings:
@@ -69,5 +90,4 @@ content:
       link: false
     third_party_settings: {  }
 hidden:
-  field_call_for_papers_file: true
   links: true

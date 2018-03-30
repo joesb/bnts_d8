@@ -1,24 +1,24 @@
-uuid: 227e5aab-b9e8-4a77-bfbc-502a6db1f945
+uuid: 2ebca624-a124-49bc-bf18-d8b64d3b6ca2
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_call_for_papers_file
+    - field.storage.node.field_conference_programme
     - node.type.conference
   module:
     - file
-id: node.conference.field_call_for_papers_file
-field_name: field_call_for_papers_file
+id: node.conference.field_conference_programme
+field_name: field_conference_programme
 entity_type: node
 bundle: conference
-label: 'Call for Papers download'
-description: 'A PDF or other call for papers file for users to download.'
+label: 'Conference Programme'
+description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: 'conference/cfp/[date:custom:Y]-[date:custom:m]'
+  file_directory: 'conference/[date:custom:Y]-[date:custom:m]'
   file_extensions: 'pdf doc docx'
   max_filesize: ''
   description_field: true

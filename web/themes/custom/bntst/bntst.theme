@@ -7,11 +7,27 @@
  * Place your custom PHP code in this file.
  */
 
+/**
+ * Preprocess fields.
+ *
+ * @param $variables
+ * @param $hook
+ */
 function bntst_preprocess_field(&$variables, $hook) {
-    $element = $variables['element'];
-    if ($element['#field_name'] == 'field_abstract') {
-        /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
-        $paragraph = $element['#object'];
-        $variables['field_id'] = $paragraph->id();
-    }
+  $element = $variables['element'];
+  if ($element['#field_name'] == 'field_abstract') {
+    /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+    $paragraph = $element['#object'];
+    $variables['field_id'] = $paragraph->id();
+  }
+}
+
+/**
+ * Preprocess menus.
+ *
+ * @param $vars
+ *   Menu theme array.
+ */
+function bntst_preprocess_menu__footer(&$vars) {
+  $vars['items']['menu_link_content:a849e03a-4f71-4a55-915f-c769780befd5']['title'] = ['#markup' => '<i class="fab fa-facebook-square"></i> ' . $vars['items']['menu_link_content:a849e03a-4f71-4a55-915f-c769780befd5']['title']];
 }

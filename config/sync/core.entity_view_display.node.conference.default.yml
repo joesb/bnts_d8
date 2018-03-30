@@ -7,10 +7,14 @@ dependencies:
     - field.field.node.conference.field_call_for_papers
     - field.field.node.conference.field_call_for_papers_file
     - field.field.node.conference.field_conference_dates
+    - field.field.node.conference.field_conference_information
+    - field.field.node.conference.field_conference_programme
+    - field.field.node.conference.field_downloads
     - field.field.node.conference.field_institution
     - node.type.conference
   module:
     - datetime_range
+    - file
     - text
     - user
 id: node.conference.default
@@ -41,6 +45,30 @@ content:
       separator: '-'
     third_party_settings: {  }
     type: daterange_default
+    region: content
+  field_conference_information:
+    weight: 5
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_conference_programme:
+    weight: 4
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_downloads:
+    weight: 6
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
     region: content
   links:
     weight: 3

@@ -24,7 +24,7 @@
     {% for item in items %}
       {%
         set item_classes = [
-          'col-sm-1',
+          'col-sm-2',
           item.is_expanded and item.below ? 'expanded',
           item.is_expanded and menu_level == 0 and item.below ? 'dropdown',
           item.in_active_trail ? 'active',

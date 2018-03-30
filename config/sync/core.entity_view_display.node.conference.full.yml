@@ -1,6 +1,6 @@
 uuid: f9674f21-6dd4-4413-81b5-195c59e1d043
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - core.entity_view_mode.node.full
@@ -8,12 +8,46 @@ dependencies:
     - field.field.node.conference.field_call_for_papers
     - field.field.node.conference.field_call_for_papers_file
     - field.field.node.conference.field_conference_dates
+    - field.field.node.conference.field_conference_information
+    - field.field.node.conference.field_conference_programme
+    - field.field.node.conference.field_downloads
     - field.field.node.conference.field_institution
     - node.type.conference
   module:
     - datetime_range
+    - ds
+    - file
     - text
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col
+      library: ds/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      left:
+        - field_conference_dates
+        - body
+        - field_call_for_papers
+        - links
+      right:
+        - field_institution
+        - field_call_for_papers_file
+        - field_conference_information
+        - field_conference_programme
+        - field_downloads
 id: node.conference.full
 targetEntityType: node
 bundle: conference
@@ -25,14 +59,22 @@ content:
     weight: 1
     settings: {  }
     third_party_settings: {  }
-    region: content
+    region: left
   field_call_for_papers:
     weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
+    region: left
+  field_call_for_papers_file:
+    type: file_default
+    weight: 5
+    region: right
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
   field_conference_dates:
     weight: 0
     label: hidden
@@ -42,12 +84,43 @@ content:
       separator: '-'
     third_party_settings: {  }
     type: daterange_default
-    region: content
+    region: left
+  field_conference_information:
+    type: file_default
+    weight: 6
+    region: right
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+  field_conference_programme:
+    type: file_default
+    weight: 7
+    region: right
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+  field_downloads:
+    type: file_default
+    weight: 8
+    region: right
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+  field_institution:
+    type: entity_reference_entity_view
+    weight: 4
+    region: right
+    label: hidden
+    settings:
+      view_mode: institution_link
+      link: false
+    third_party_settings: {  }
   links:
     weight: 3
-    region: content
+    region: left
     settings: {  }
     third_party_settings: {  }
-hidden:
-  field_call_for_papers_file: true
-  field_institution: true
+hidden: {  }
