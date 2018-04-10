@@ -69,6 +69,10 @@ body {
     max-width: 450px;
 }
 
+.main-container {
+    margin-top: 21px;
+}
+
 @media screen and (max-width:450px) {
     .navbar--site-name{
         width:260px;
@@ -81,3 +85,12 @@ body {
 }
 
 /* PAGE SPECIFICS */
+
+/** Seminar pages **/
+h2.field--name-field-paper-session {
+    border-bottom: 2px solid #dddddd;
+}
+
+.field--name-field-paper {
+    margin-left: 2em;
+}
