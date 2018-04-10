@@ -9,12 +9,14 @@ dependencies:
     - field.field.node.conference.field_conference_dates
     - field.field.node.conference.field_conference_information
     - field.field.node.conference.field_conference_programme
+    - field.field.node.conference.field_conference_registration
     - field.field.node.conference.field_downloads
     - field.field.node.conference.field_institution
     - node.type.conference
   module:
     - datetime_range
     - file
+    - link
     - text
     - user
 id: node.conference.default
@@ -61,6 +63,18 @@ content:
       use_description_as_link_text: true
     third_party_settings: {  }
     type: file_default
+    region: content
+  field_conference_registration:
+    weight: 7
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
   field_downloads:
     weight: 6

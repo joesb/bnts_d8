@@ -8,30 +8,46 @@ dependencies:
     - field.field.node.conference.field_call_for_papers
     - field.field.node.conference.field_call_for_papers_file
     - field.field.node.conference.field_conference_dates
+    - field.field.node.conference.field_conference_information
+    - field.field.node.conference.field_conference_programme
+    - field.field.node.conference.field_conference_registration
+    - field.field.node.conference.field_downloads
     - field.field.node.conference.field_institution
     - node.type.conference
   module:
     - datetime_range
     - ds
     - file
+    - link
     - text
     - user
 third_party_settings:
   ds:
     layout:
-      id: layout_onecol
-      library: layout_discovery/onecol
+      id: ds_2col
+      library: ds/ds_2col
       disable_css: false
       entity_classes: all_classes
-      settings: {  }
+      settings:
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
     regions:
-      content:
+      left:
         - node_title
         - field_conference_dates
-        - field_institution
         - body
         - field_call_for_papers
+      right:
+        - field_institution
         - field_call_for_papers_file
+        - field_conference_registration
     fields:
       node_title:
         plugin_id: node_title
@@ -50,44 +66,59 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 3
+    weight: 2
     settings:
       trim_length: 600
     third_party_settings: {  }
-    region: content
+    region: left
   field_call_for_papers:
     type: text_default
-    weight: 4
-    region: content
+    weight: 3
+    region: left
     label: above
     settings: {  }
     third_party_settings: {  }
   field_call_for_papers_file:
     type: file_default
     weight: 5
-    region: content
-    label: hidden
+    region: right
+    label: above
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
   field_conference_dates:
     type: daterange_default
     weight: 1
-    region: content
+    region: left
     label: hidden
     settings:
       timezone_override: ''
       format_type: conference_date
       separator: '-'
     third_party_settings: {  }
+  field_conference_registration:
+    type: link_separate
+    weight: 6
+    region: right
+    label: above
+    settings:
+      trim_length: 80
+      rel: ''
+      target: ''
+      url_only: false
+      url_plain: false
+    third_party_settings: {  }
   field_institution:
     type: entity_reference_entity_view
-    weight: 2
-    region: content
+    weight: 4
+    region: right
     label: hidden
     settings:
       view_mode: institution_link
       link: false
     third_party_settings: {  }
 hidden:
+  field_conference_information: true
+  field_conference_programme: true
+  field_downloads: true
   links: true

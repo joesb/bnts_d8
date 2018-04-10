@@ -9,12 +9,14 @@ dependencies:
     - field.field.node.conference.field_conference_dates
     - field.field.node.conference.field_conference_information
     - field.field.node.conference.field_conference_programme
+    - field.field.node.conference.field_conference_registration
     - field.field.node.conference.field_downloads
     - field.field.node.conference.field_institution
     - node.type.conference
   module:
     - datetime_range
     - file
+    - link
     - path
     - text
 id: node.conference.default
@@ -74,6 +76,14 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+    region: content
+  field_conference_registration:
+    weight: 29
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
   field_downloads:
     weight: 28

@@ -1,0 +1,19 @@
+uuid: e5ccfa4c-9e53-4a15-8150-1f285c52ddad
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_conference_registration
+field_name: field_conference_registration
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

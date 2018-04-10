@@ -7,7 +7,7 @@ dependencies:
     - field.storage.node.field_conference_dates
     - field.storage.taxonomy_term.field_logo
     - field.storage.taxonomy_term.field_website
-    - image.style.max_325x325
+    - image.style.max_150x150
     - node.type.conference
     - system.menu.main
   module:
@@ -631,7 +631,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: max_325x325
+            image_style: max_150x150
             image_link: ''
           group_column: ''
           group_columns: {  }
